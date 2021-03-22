@@ -15,6 +15,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 63.9375em) {
@@ -27,5 +29,56 @@ body {
   .hide-for-desktop {
     display: none;
   }
+}
+
+.menu {
+  padding: 1.5rem;
+}
+
+.menu form {
+  margin-bottom: 1.875rem;
+}
+
+.menu__input {
+  width: 100%;
+  padding: 1rem 0.8rem;
+  border: none;
+  border-radius: 10px;
+  background: #f7f7f7 url("/icons/loupe.svg") no-repeat 95%;
+  background-size: 16px;
+}
+
+.menu__cards .card {
+  height: 150px;
+  background-image: url("/img/vector1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 0rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.menu__cards .card .temp,
+.menu__cards .card .city {
+  color: #fff;
+  margin: 0rem 0rem 1rem;
+}
+
+.menu__cards .card .city {
+  font-size: 25px;
+}
+
+.menu__cards .card .temp {
+  font-size: 35px;
 }
 /*# sourceMappingURL=styles.css.map */
