@@ -1,5 +1,6 @@
 const menu = document.querySelector('.menu__cards');
-const input = document.getElementById('search');
+const search = document.getElementById('search');
+const form = document.querySelector('form');
 
 const cards = [{
         name: 'New York',
@@ -28,10 +29,24 @@ const cards = [{
 ];
 
 
+
+
 window.addEventListener('DOMContentLoaded', () => {
     displayMenu(cards);
-    // filterMenu(cards);
+    filterMenu(cards);
 })
+
+form.addEventListener('submit', submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+
+    let value = search.value;
+    console.log(value);
+}
+
+
+
 
 function displayMenu(items) {
     let displayMenu = items.map(item => {
@@ -49,4 +64,10 @@ function displayMenu(items) {
     })
     displayMenu = displayMenu.join('');
     menu.innerHTML = displayMenu;
+}
+
+function filterMenu(items) {
+    search.addEventListener('enter', () => {
+        console.log('works!');
+    })
 }

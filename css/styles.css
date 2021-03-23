@@ -96,7 +96,8 @@ body {
 }
 
 .menu__cards .card .card__info .city {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
 .menu__cards .card .card__info .temp {
