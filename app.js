@@ -26,36 +26,53 @@ const cards = [{
         temp: 5,
         img: '/img/vector7.jpg',
     },
+    {
+        name: 'Prague',
+        temp: 9,
+        img: '/img/vector7.jpg',
+    },
 ];
 
-
-
-
+// event listeners
 window.addEventListener('DOMContentLoaded', () => {
+
+    document.getElementById('search').value = '';
     displayMenu(cards);
 
 })
+form.addEventListener('input', submitForm);
 
-form.addEventListener('submit', submitForm);
+// functions
 
+// filters cards according to input
 function submitForm(e) {
     e.preventDefault();
-    filterMenu(cards);
+    filterMenu();
 }
 
-function filterMenu(items) {
+function filterMenu() {
     let value = search.value;
-
-    let filteredMenu = items.filter(item => item.name.toUpperCase() === value.toUpperCase());
-    displayMenu(filteredMenu);
+    let filteredItems = [];
     if (value === '') {
         displayMenu(cards);
+        return;
     }
 
+    cards.forEach(card => {
+
+        if (card.name.toUpperCase().startsWith(value.toUpperCase())) {
+            filteredItems.push(card);
+        }
+    })
+
+    displayMenu(filteredItems);
+    if (!filteredItems.length) {
+
+        menu.innerHTML = `<h1>There is no such city in the list &#128533;</h1>`;
+
+
+    }
 }
-
-
-
 
 function displayMenu(items) {
     let displayMenu = items.map(item => {

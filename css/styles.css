@@ -48,6 +48,26 @@ body {
   background-size: 16px;
 }
 
+.menu__cards h1 {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 22px;
+  font-weight: lighter;
+  color: #6b6b6b;
+  min-height: 50vh;
+  width: 230px;
+  margin: auto;
+  line-height: 3rem;
+}
+
 .menu__cards .card {
   position: relative;
   width: 100%;
