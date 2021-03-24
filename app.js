@@ -33,16 +33,25 @@ const cards = [{
 
 window.addEventListener('DOMContentLoaded', () => {
     displayMenu(cards);
-    filterMenu(cards);
+
 })
 
 form.addEventListener('submit', submitForm);
 
 function submitForm(e) {
     e.preventDefault();
+    filterMenu(cards);
+}
 
+function filterMenu(items) {
     let value = search.value;
-    console.log(value);
+
+    let filteredMenu = items.filter(item => item.name.toUpperCase() === value.toUpperCase());
+    displayMenu(filteredMenu);
+    if (value === '') {
+        displayMenu(cards);
+    }
+
 }
 
 
@@ -64,10 +73,4 @@ function displayMenu(items) {
     })
     displayMenu = displayMenu.join('');
     menu.innerHTML = displayMenu;
-}
-
-function filterMenu(items) {
-    search.addEventListener('enter', () => {
-        console.log('works!');
-    })
 }
