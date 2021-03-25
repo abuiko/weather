@@ -1,0 +1,43 @@
+.weather {
+    &__img {
+        width: 100%;
+        height: 500px;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .stats {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -40%);
+            text-align: center;
+
+            #desc {
+                font-size: 1.6rem;
+                margin: 1rem 0rem;
+            }
+
+            #day {
+                font-size: 1.1rem;
+                margin: 1rem 0rem;
+            }
+
+            #temp {
+                font-size: 7.6rem;
+                margin: 1rem 0rem;
+                position: relative;
+
+                span {
+                    font-size: 3rem;
+                    position: absolute;
+                    top: 0;
+                }
+            }
+        }
+    }
+}

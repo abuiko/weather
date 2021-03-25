@@ -123,4 +123,48 @@ body {
 .menu__cards .card .card__info .temp {
   font-size: 2rem;
 }
+
+.weather__img {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.weather__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.weather__img .stats {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+  text-align: center;
+}
+
+.weather__img .stats #desc {
+  font-size: 1.6rem;
+  margin: 1rem 0rem;
+}
+
+.weather__img .stats #day {
+  font-size: 1.1rem;
+  margin: 1rem 0rem;
+}
+
+.weather__img .stats #temp {
+  font-size: 7.6rem;
+  margin: 1rem 0rem;
+  position: relative;
+}
+
+.weather__img .stats #temp span {
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+}
 /*# sourceMappingURL=styles.css.map */
