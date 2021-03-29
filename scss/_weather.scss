@@ -16,6 +16,7 @@
             left: 50%;
             transform: translate(-50%, -40%);
             text-align: center;
+            color: #fff;
 
             #desc {
                 font-size: 1.6rem;
@@ -40,4 +41,41 @@
             }
         }
     }
+
+    &__info {
+        padding: 0.2rem 1rem;
+
+        h4 {
+            margin-top: 0rem;
+            font-size: 1.3rem;
+            padding: 0rem 0.3rem;
+            position: relative;
+        }
+
+        h4::before {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            top: 130%;
+            left: 2%;
+            background: rgb(63, 63, 63);
+        }
+
+        .icons-container {
+            padding: 0rem 0.3rem;
+            display: flex;
+            justify-content: space-between;
+
+            .icon {
+                text-align: center;
+
+                .weekday {
+                    font-size: 1rem;
+                }
+            }
+
+        }
+    }
+
 }
