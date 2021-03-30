@@ -2,15 +2,18 @@ const menu = document.querySelector('.menu__cards');
 const search = document.getElementById('search');
 const form = document.querySelector('form');
 
+
 const cards = [{
         name: 'New York',
         temp: 15,
         img: '/img/vector1.jpg',
+        background: '/img/blue.png',
     },
     {
         name: 'Tokyo',
         temp: 8,
         img: '/img/vector2.jpg',
+        background: '/img/red.png',
 
     },
 
@@ -18,6 +21,7 @@ const cards = [{
         name: 'London',
         temp: 11,
         img: '/img/vector4.jpg',
+        background: '/img/violet.png',
 
     },
 
@@ -25,11 +29,13 @@ const cards = [{
         name: 'Paris',
         temp: 5,
         img: '/img/vector7.jpg',
+        background: '/img/orange.png',
     },
     {
         name: 'Prague',
         temp: 9,
         img: '/img/vector7.jpg',
+        background: '/img/blue.png',
     },
 ];
 
@@ -38,6 +44,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('search').value = '';
     displayMenu(cards);
+
+
 
 })
 form.addEventListener('input', submitForm);
@@ -88,6 +96,7 @@ function displayMenu(items) {
     </article>`;
 
     })
+
     displayMenu = displayMenu.join('');
     menu.innerHTML = displayMenu;
 }
