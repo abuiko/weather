@@ -1,3 +1,7 @@
+const temp = document.getElementById('temp');
+const desc = document.getElementById('desc');
+const city = document.getElementById('city');
+
 window.addEventListener('load', () => {
     let lat;
     let long;
@@ -16,6 +20,9 @@ window.addEventListener('load', () => {
                 })
                 .then(data => {
                     console.log(data);
+                    city.textContent = data.name;
+                    desc.textContent = data.weather[1].description;
+                    // temp.textContent = data.main.temp;
                 })
         });
     }
