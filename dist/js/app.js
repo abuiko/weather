@@ -6,36 +6,36 @@ const form = document.querySelector('form');
 const cards = [{
         name: 'New York',
         temp: 15,
-        img: '/img/vector1.jpg',
-        background: '/img/blue.png',
+        img: 'dist/img/vector1.jpg',
+        background: 'dist/img/blue.png',
     },
     {
         name: 'Tokyo',
         temp: 8,
-        img: '/img/vector2.jpg',
-        background: '/img/red.png',
+        img: 'dist/img/vector2.jpg',
+        background: 'dist/img/red.png',
 
     },
 
     {
         name: 'London',
         temp: 11,
-        img: '/img/vector4.jpg',
-        background: '/img/violet.png',
+        img: 'dist/img/vector4.jpg',
+        background: 'dist/img/violet.png',
 
     },
 
     {
         name: 'Paris',
         temp: 5,
-        img: '/img/vector7.jpg',
-        background: '/img/orange.png',
+        img: 'dist/img/vector7.jpg',
+        background: 'dist/img/orange.png',
     },
     {
         name: 'Prague',
         temp: 9,
-        img: '/img/vector7.jpg',
-        background: '/img/blue.png',
+        img: 'dist/img/vector7.jpg',
+        background: 'dist/img/blue.png',
     },
 ];
 
