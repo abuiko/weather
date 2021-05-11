@@ -6,13 +6,15 @@ const form = document.querySelector('form');
 const cards = [{
         name: 'New York',
         temp: 15,
-        img: 'dist/img/vector1.jpg',
+        img: 'dist/img/clear.jpg',
+        icon: 'dist/icons/sun.png',
         background: 'dist/img/blue.png',
     },
     {
         name: 'Tokyo',
         temp: 8,
-        img: 'dist/img/vector2.jpg',
+        img: 'dist/img/night.jpg',
+        icon: 'dist/icons/night.png',
         background: 'dist/img/red.png',
 
     },
@@ -20,7 +22,8 @@ const cards = [{
     {
         name: 'London',
         temp: 11,
-        img: 'dist/img/vector4.jpg',
+        img: 'dist/img/rain.jpg',
+        icon: 'dist/icons/rain.png',
         background: 'dist/img/violet.png',
 
     },
@@ -28,13 +31,15 @@ const cards = [{
     {
         name: 'Paris',
         temp: 5,
-        img: 'dist/img/vector7.jpg',
+        img: 'dist/img/snow.jpg',
+        icon: 'dist/icons/snowy.png',
         background: 'dist/img/orange.png',
     },
     {
         name: 'Prague',
         temp: 9,
-        img: 'dist/img/vector3.jpg',
+        img: 'dist/img/cloudy.jpg',
+        icon: 'dist/icons/cloud.png',
         background: 'dist/img/blue.png',
     },
 ];
@@ -88,9 +93,14 @@ function displayMenu(items) {
         <img src=${item.img} class="card__photo" alt="${item.img}">
  
         <div class="card__info">
-            
+                <div class="info-text">
                 <h3 class="city">${item.name}</h3>
-                <h2 class="temp">${item.temp}&#176</h2>
+                <h2 class="temp">${item.temp}&#176C</h2>
+                </div>
+                <div lass="info-icon">
+                    <img src=${item.icon} class="card-icon" alt="${item.icon}">
+                </div>
+                
                         
         </div>
     </article>`;

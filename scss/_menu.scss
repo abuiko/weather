@@ -37,6 +37,15 @@
         }
     }
 
+    .recommended {
+        font-size: 1rem;
+        font-weight: lighter;
+        // color: rgb(104, 104, 104);
+        font-style: italic;
+        margin-left: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
     &__cards {
         margin: 1rem;
 
@@ -46,19 +55,19 @@
             // justify-content: center;
         }
 
-        h1 {
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            font-weight: lighter;
-            color: rgb(107, 107, 107);
-            min-height: 50vh;
-            width: 230px;
-            margin: auto;
-            line-height: 3rem;
-        }
+        // h1 {
+        //     text-align: center;
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     font-size: 22px;
+        //     font-weight: lighter;
+        //     color: rgb(107, 107, 107);
+        //     min-height: 50vh;
+        //     width: 230px;
+        //     margin: auto;
+        //     line-height: 3rem;
+        // }
 
         .card {
             position: relative;
@@ -67,8 +76,8 @@
             border-radius: 20px;
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 2rem;
+            align-items: center;
+            margin-bottom: 1rem;
             cursor: pointer;
 
             @include breakpoint-up(medium) {
@@ -98,19 +107,30 @@
                 justify-content: space-between;
                 align-items: center;
 
+                .card-icon {
+                    width: 80px;
+                    margin-right: 1rem;
+                }
+
                 .city,
                 .temp {
-                    margin: 0rem 0rem 1rem;
                     color: #fff;
+
                 }
 
                 .city {
-                    font-size: 1.2rem;
-                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                    // text-transform: uppercase;
+                    margin: 0rem 0rem 1rem 1rem;
+
                 }
 
                 .temp {
-                    font-size: 2rem;
+                    font-size: 1.4rem;
+                    margin-bottom: 0rem;
+                    margin-top: 0rem;
+                    margin-left: 1rem;
+
                 }
             }
         }
