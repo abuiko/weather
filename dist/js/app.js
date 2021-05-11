@@ -34,7 +34,7 @@ const cards = [{
     {
         name: 'Prague',
         temp: 9,
-        img: 'dist/img/vector7.jpg',
+        img: 'dist/img/vector3.jpg',
         background: 'dist/img/blue.png',
     },
 ];
