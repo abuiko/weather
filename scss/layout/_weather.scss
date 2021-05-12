@@ -1,19 +1,30 @@
 // 
-
-.weather {
+body {
     background-image: url('/dist/img/clear.jpg');
     background-position: center;
     background-size: cover;
+}
+
+.weather {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 1.5fr 0.8fr;
+    max-width: 1280px;
+    padding: 1rem;
+    margin: auto;
+
 
     &__btns {
         display: flex;
         justify-content: space-between;
         align-self: center;
         padding: 0rem 1rem;
+
+        @include breakpoint-up(large) {
+            justify-content: space-around;
+        }
+
 
         i {
             color: #fff;
@@ -23,6 +34,7 @@
 
     &__main {
         align-self: center;
+
 
         .stats {
             text-align: center;
@@ -41,12 +53,24 @@
 
             .main-icon {
                 width: 150px;
+
+                @include breakpoint-up(medium) {
+                    width: 200px;
+                }
+
+                @include breakpoint-up(large) {
+                    width: 250px;
+                }
             }
 
             #temp {
                 font-size: 2.1rem;
                 margin-top: 1rem;
                 margin-bottom: 0rem;
+
+                @include breakpoint-up(large) {
+                    font-size: 3rem;
+                }
 
             }
         }
@@ -55,11 +79,18 @@
     &__info {
         align-self: center;
 
+
         // margin-bottom: 3rem;
         .days-info {
             display: flex;
             justify-content: space-between;
             margin: 0rem 1rem;
+
+            @include breakpoint-up(large) {
+                width: 80%;
+                margin: auto;
+                justify-content: center;
+            }
 
             .today,
             .four-days {
@@ -72,6 +103,14 @@
                 color: #fff;
                 // font-weight: bold;
                 text-transform: uppercase;
+
+                @include breakpoint-up(large) {
+                    width: 40%;
+                    font-size: 1.1rem;
+                }
+
+
+
             }
 
             .today.active,
@@ -89,6 +128,11 @@
             justify-content: space-around;
             align-items: center;
             color: #fff;
+
+            @include breakpoint-up(large) {
+                width: 80%;
+                margin: 2rem auto 0rem;
+            }
         }
 
         .icon {
@@ -97,11 +141,20 @@
             p {
                 margin-top: 0.5rem;
                 margin-bottom: 0.5rem;
+
+                @include breakpoint-up(large) {
+                    font-size: 1.2rem;
+                }
             }
 
             img {
                 width: 45px;
                 height: 45px;
+
+                @include breakpoint-up(large) {
+                    width: 55px;
+                    height: 55px;
+                }
             }
         }
 
