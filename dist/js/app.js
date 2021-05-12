@@ -1,6 +1,8 @@
 const menu = document.querySelector('.menu__cards');
 const search = document.getElementById('search');
 const form = document.querySelector('form');
+const savedHeader = document.querySelector('.saved');
+const recommendedHeader = document.querySelector('.recommended');
 
 
 const cards = [{
@@ -75,16 +77,19 @@ function filterMenu() {
 
         if (card.name.toUpperCase().startsWith(value.toUpperCase())) {
             filteredItems.push(card);
+
         }
+
     })
+
 
     displayMenu(filteredItems);
     if (!filteredItems.length) {
-
+        savedHeader.style.display = 'none';
+        recommendedHeader.style.display = 'none';
         menu.innerHTML = `<h1>There is no such city in the list &#128533;</h1>`;
-
-
     }
+
 }
 
 function displayMenu(items) {
@@ -106,7 +111,8 @@ function displayMenu(items) {
     </article>`;
 
     })
-
+    savedHeader.style.display = 'block';
+    recommendedHeader.style.display = 'block';
     displayMenu = displayMenu.join('');
     menu.innerHTML = displayMenu;
 }
