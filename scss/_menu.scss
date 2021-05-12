@@ -1,8 +1,12 @@
 .menu {
-    padding: 1.5rem;
+    padding: 1.5rem 0rem;
+
+    @include breakpoint-up(medium) {
+        padding: 2rem;
+    }
 
     form {
-        margin: 1rem 1rem 1.875rem 1rem;
+        margin: 1rem;
         display: flex;
         align-items: center;
 
@@ -13,12 +17,12 @@
         .logo {
             display: none;
 
-            @include breakpoint-up(medium) {
-                display: block;
-                width: 35px;
-                height: 37px;
-                margin-right: 1rem;
-            }
+            // @include breakpoint-up(medium) {
+            //     display: block;
+            //     width: 35px;
+            //     height: 37px;
+            //     margin-right: 1rem;
+            // }
 
         }
     }
@@ -37,14 +41,31 @@
         }
     }
 
-    .recommended {
+    .recommended,
+    .saved__locations {
         font-size: 1rem;
-        font-weight: lighter;
-        // color: rgb(104, 104, 104);
-        font-style: italic;
+        color: rgb(65, 65, 65);
         margin-left: 1.3rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
+
+    .saved {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+
+        &__locations {
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+            margin-left: 1.3rem;
+            font-weight: lighter;
+            font-style: italic;
+        }
+    }
+
+
 
     &__cards {
         margin: 1rem;
@@ -72,23 +93,26 @@
         .card {
             position: relative;
             width: 100%;
-            height: 150px;
-            border-radius: 20px;
+            height: 130px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 5px;
+            border-top-left-radius: 5px;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
-            margin-bottom: 1rem;
+            margin-bottom: 0.7rem;
             cursor: pointer;
 
             @include breakpoint-up(medium) {
                 width: 45%;
-                height: 150px;
-                margin: 1rem;
+                height: 180px;
+                margin: 0.6rem;
             }
 
             @include breakpoint-up(large) {
                 width: 30%;
-                height: 250px;
+
             }
 
 
@@ -96,7 +120,11 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                border-radius: 20px;
+                border-top-right-radius: 50px;
+                border-bottom-left-radius: 50px;
+
+                border-bottom-right-radius: 5px;
+                border-top-left-radius: 5px;
             }
 
             .card__info {
@@ -108,8 +136,12 @@
                 align-items: center;
 
                 .card-icon {
-                    width: 80px;
+                    width: 65px;
                     margin-right: 1rem;
+
+                    @include breakpoint-up(medium) {
+                        width: 80px;
+                    }
                 }
 
                 .city,
@@ -119,9 +151,13 @@
                 }
 
                 .city {
-                    font-size: 1.5rem;
+                    font-size: 1.29rem;
                     // text-transform: uppercase;
                     margin: 0rem 0rem 1rem 1rem;
+
+                    @include breakpoint-up(medium) {
+                        font-size: 1.5rem;
+                    }
 
                 }
 

@@ -1,85 +1,110 @@
+// 
+
 .weather {
-    &__img {
-        width: 100%;
-        min-height: 60vh;
-        position: relative;
+    background-image: url('/dist/img/clear.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.5fr 0.8fr;
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        padding: 0rem 1rem;
 
+        i {
+            color: #fff;
+            font-size: 1.4rem;
         }
+    }
+
+    &__main {
+        align-self: center;
 
         .stats {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -40%);
             text-align: center;
             color: #fff;
 
-            #desc {
-                font-size: 1.6rem;
-                margin: 1rem 0rem;
+
+
+            #city {
+                margin-top: 0rem;
+                font-size: 1.7rem;
             }
 
-            #day {
-                font-size: 1.1rem;
-                margin: 1rem 0rem;
+            #desc {
+                font-size: 1.2rem;
+            }
+
+            .main-icon {
+                width: 150px;
             }
 
             #temp {
-                font-size: 7.6rem;
-                margin: 1rem 0rem;
-                position: relative;
+                font-size: 2.1rem;
+                margin-top: 1rem;
+                margin-bottom: 0rem;
 
-                span {
-                    font-size: 3rem;
-                    position: absolute;
-                    top: 0;
-                }
             }
         }
     }
 
     &__info {
-        padding: 0.2rem 1rem;
+        align-self: center;
 
-        // min-height: 40vh;
+        // margin-bottom: 3rem;
+        .days-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 0rem 1rem;
+
+            .today,
+            .four-days {
+                width: 50%;
+                padding: 0.5rem 0rem 0.7rem;
+                font-size: 0.9rem;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid #fff;
+                color: #fff;
+                // font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            .today.active,
+            .four-days.active {
+                border-bottom: 2px solid rgb(168, 149, 149);
+            }
 
 
-        h4 {
-            margin-top: 0rem;
-            font-size: 1.3rem;
-            padding: 0rem 0.3rem;
-            position: relative;
-        }
 
-        h4::before {
-            content: "";
-            position: absolute;
-            width: 50px;
-            height: 2px;
-            top: 130%;
-            left: 2%;
-            background: rgb(63, 63, 63);
         }
 
         .icons-container {
-            padding: 0rem 0.3rem;
             display: flex;
-            justify-content: space-between;
+            padding: 1rem 1rem;
+            justify-content: space-around;
+            align-items: center;
+            color: #fff;
+        }
 
-            .icon {
-                text-align: center;
+        .icon {
+            text-align: center;
 
-                .weekday {
-                    font-size: 1rem;
-                }
+            p {
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
             }
 
+            img {
+                width: 45px;
+                height: 45px;
+            }
         }
-    }
 
+
+    }
 }

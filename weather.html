@@ -17,46 +17,63 @@
 <body>
     <main>
         <section class="weather">
-            <div class="weather__img">
-                <img src="dist/img/orange.png" alt="orange vector img">
+            <div class="weather__btns">
+                <div class="return-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+                <div class="save-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="refresh-btn">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+            </div>
+            <div class="weather__main">
+                <!-- <img src="dist/img/clear.jpg" alt="gradient image"> -->
                 <div class="stats">
-                    <h3 id="desc">Clear</h3>
                     <p id="city">New York</p>
-                    <h1 id="temp">15<span>&#176</span></h1>
+                    <p id="desc">Cloudy</p>
+                    <img class="main-icon" src="dist/icons/sun-cloud-main.png" alt="">
+                    <h1 id="temp">15<span>&#176C</span></h1>
                 </div>
                 
             </div>
             <div class="weather__info">
-                <h4>New York</h4>
+                <!-- <h4>New York</h4> -->
+                <div class="days-info">
+                    <button class="today">Today</button>
+                    <button class="four-days active">Four Days</button>
+                    
+                </div>
                 <div class="icons-container">
-                    <div class="icon">
+                    <!-- <div class="icon">
                         <p class="weekday">Mon</p>
-                        <img src="dist/icons/sun-cloud.svg" alt="sun-cloud">
+                        <img src="dist/icons/sun-cloud.png" alt="sun-cloud">
                         <p class="temp-daily">15&#176</p>
                     </div>
                     <div class="icon">
                         <p class="weekday">Tue</p>
-                        <img src="dist/icons/sun-cloud.svg" alt="sun-cloud">
+                        <img src="dist/icons/rain.png" alt="sun-cloud">
                         <p class="temp-daily">15&#176</p>
-                    </div>
+                    </div> -->
                     <div class="icon">
                         <p class="weekday">Wed</p>
-                        <img src="dist/icons/sun-cloud.svg" alt="sun-cloud">
+                        <img src="dist/icons/snowy.png" alt="sun-cloud">
                         <p class="temp-daily">15&#176</p>
                     </div>
                     <div class="icon">
                         <p class="weekday">Thu</p>
-                        <img src="dist/icons/sun-cloud.svg" alt="sun-cloud">
+                        <img src="dist/icons/thunder.png" alt="sun-cloud">
                         <p class="temp-daily">15&#176</p>
                     </div>
                     <div class="icon">
                         <p class="weekday">Fri</p>
-                        <img src="dist/icons/sun-cloud.svg" alt="sun-cloud">
+                        <img src="dist/icons/sun.png" alt="sun-cloud">
                         <p class="temp-daily">15&#176</p>
                     </div>
                     <div class="icon">
                         <p class="weekday">Sat</p>
-                        <img src="dist/icons/sun-cloud.svg" alt="sun-cloud">
+                        <img src="dist/icons/snowy.png" alt="sun-cloud">
                         <p class="temp-daily">15&#176</p>
                     </div>
                     
